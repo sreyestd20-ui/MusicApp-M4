@@ -1,0 +1,18 @@
+package com.tunombre.finalm4
+
+import android.os.Bundle
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
+class DetalleActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_detalle)
+
+        val genero = intent.getStringExtra("genero")
+        val tvDetalle = findViewById<TextView>(R.id.tvDetalle)
+
+        tvDetalle.text = "Has seleccionado el género: $genero"
+    }
+}
